@@ -3,7 +3,7 @@
 4.html — Страница успешной авторизации на auth.netts.ru	(https://auth.netts.ru/authenticated.html)
 5.html — Страница неуспешной авторизации на auth.netts.ru (https://auth.netts.ru/incorrect-login-or-password.html)
 6.html — Страница ожидания после ввода данных на auth.netts.ru	(https://auth.netts.ru/wait.html)
-
+7.html — Страница с ошибкой обработки после ввода данных на auth.netts.ru (https://auth.netts.ru/authentication-failed.html)
 
 TODO:
 Добавить кнопки соцсетей на страницу 2
