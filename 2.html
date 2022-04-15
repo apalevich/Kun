@@ -91,6 +91,12 @@
             width: 100%;
             height: 71px;
         }
+        /* FOOTER */
+        .footer-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
         .footer {
             height: 100%;
             margin: 0 40px;
@@ -98,31 +104,51 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid #F1F1F1;
-            /* text */
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 140%;
             color: #94949E;
         }
-        .footer span {
+        .copyright {
+            flex-grow: 1;
+        }
+        .contacts {
+            display: flex;
+            align-items: center;
+        }
+        .contacts span {
             margin-left: 17px;
         }
-        .footer a:link,
-        .footer a:visited,
-        .footer a:active {
+        .contacts a:link,
+        .contacts a:visited,
+        .contacts a:active {
             color: #94949E;
             text-decoration: solid;
         }
-        .footer a:hover {
+        .contacts a:hover {
             color: #94949E;
             cursor: pointer;
             text-decoration: underline;
         }
-        @media screen and (max-width: 767px) {
+        .telegram-icon {
+            width: 26px;
+            height: 26px;
+            margin-left: 42px;
+        }
+        .whatsapp-icon {
+            width: 26px;
+            height: 26px;
+            margin-left: 18px;
+        }
+        @media screen and (max-width: 790px) {
+            body {
+                justify-content: space-between;
+            }
             .form-container {
                 width: 95%;
                 max-width: 440px;
+                margin-top: 15%;
             }
             .heading {
                 font-weight: normal;
@@ -136,19 +162,44 @@
                 height: min-content;
             }
             .footer {
-                /* flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                flex-flow: column-reverse; */
-                font-size: 14px;
+                display: grid;
                 gap: 7px;
+                font-size: 14px;
             }
-            .footer span {
+            .footer .copyright {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .footer .contacts {
+                grid-column: 2;
+                grid-row: 1;
+                flex-direction: column;
+            }
+            .footer .contacts span {
                 display: none;
             }
-            .footer a {
+            .footer .contacts a {
                 display: block;
                 line-height: 21px;
+            }
+            .footer .messengers {
+                grid-column: 1 / 3;
+                grid-row: 2;
+                text-align: center;
+                margin-top: 5px;
+            }
+            .footer .messengers a {
+                display: inline-block;
+                width: min-content;
+            }
+            .telegram-icon {
+                width: 39px;
+                height: 39px;
+                margin-left: 0;
+            }
+            .whatsapp-icon {
+                width: 39px;
+                height: 39px;
             }
         }
     </style>
@@ -170,10 +221,14 @@
         <div class="footer">
             <div class="copyright">&copy; Рескон, 2022</div>
             <div class="contacts">
-                <span>Телефон службы поддержки:</span>
+                <span>Телефон службы поддержки:&nbsp;</span>
                 <a href="tel:+74995798900">+7&nbsp;499&nbsp;579-89-00</a>
-                <span>email:</span>
+                <span>email:&nbsp;</span>
                 <a href="mailto:support@netts.ru">support@netts.ru</a>
+            </div>
+            <div class="messengers">
+                <a href="https://t.me/netts_supportbot"><img class="telegram-icon" src="./images/telegram.png" alt="Иконка Телеграм"></a>
+                <a href="https://wa.me/79295036168"><img class="whatsapp-icon" src="./images/whatsapp.png" alt="Иконка whatsapp"></a>
             </div>
         </div>
     </div>
