@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-17bf068c76eb2d552b4eea51a7f9c02d251c4a9c3b30c6a9aa322cc8eea70529.ico">
-    <title>Вход в личный кабинет</title>
+    <title>Страница аутентификации</title>
     <style>
         /* border-radius */
         /* button-color: #A4BE52 */
@@ -57,8 +57,15 @@
         .heading {
             font-weight: normal;
             font-size: 22px;
-            margin-top: 0;
-            margin-bottom: 16px;
+            margin: 0;
+        }
+        .description {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #363940;
+            margin-bottom: 24px;
         }
         .form > input {
             background: #F9FAFA;
@@ -131,6 +138,9 @@
                 font-size: 16px;
                 margin-bottom: 18px;
             }
+            .description {
+                font-size: 14px;
+            }
             .form {
                 padding: 12px 32px;
             }
@@ -162,9 +172,14 @@
             <img class="label" src="./images/label.svg" alt="Label">
         </div>
         <form class="form" action="/login" accept-charset="UTF-8" method="post">
-            <h1 class="heading">Вход в личный кабинет</h1>
-            <input placeholder="Логин" type="text" name="user[login]" id="user_login">
-            <input placeholder="Пароль" type="password" name="user[password]" id="user_password">
+            <h1 class="heading">Страница аутентификации</h1>
+            <p class="description">
+                Вы подключаетесь к сети Netts.ru с нового устройства.<br>
+                <br>
+                Пожалуйста, введите логин и пароль от личного кабинета для обновления данных и доступа в Интернет.
+            </p>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
             <input type="submit" name="commit" value="Войти" class="button-submut" data-disable-with="Войти">
         </form>
     </div>
