@@ -5,6 +5,7 @@
 6.html — Страница ожидания после ввода данных на auth.netts.ru	(https://auth.netts.ru/wait.html)
 7.html — Страница с ошибкой обработки после ввода данных на auth.netts.ru (https://auth.netts.ru/authentication-failed.html)
 9.html — Страница редиректа клиента при заблокированном аккаунте (https://my.netts.ru/blocked-redirect)
+10.html — Страница редиректа клиента при нехватке средств на аккаунте (https://my.netts.ru/no-money-redirect)
 
 TODO:
 Добавить кнопки соцсетей на страницу 2
