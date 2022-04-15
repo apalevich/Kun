@@ -19,6 +19,7 @@
             justify-content: center;
             height: 100vh;
             font-family: Ubuntu, Helvetica, Arial, sans-serif;
+            margin: 0;
         }
         .form-container {
             height: min-content;
@@ -27,9 +28,7 @@
             align-self: center;
             background-color: white;
             box-shadow: gray;
-
             box-shadow: 0px 3px 12px rgba(202, 206, 211, 0.16);
-
             border: 1px solid #F3F3F3;
             border-radius: 16px;
         }
@@ -53,7 +52,7 @@
         .form {
             display: flex;
             flex-direction: column;
-            padding: 32px;
+            padding: 24px 32px;
         }
         .heading {
             font-weight: normal;
@@ -76,7 +75,7 @@
         .form > input:last-of-type {
             margin-bottom: 24px;
         }
-        .form > button {
+        .form > .button-submut {
             background-color: #9EBF3B;
             border-radius: 8px;
             border: 0;
@@ -111,13 +110,46 @@
         }
         .footer a:link,
         .footer a:visited,
-        .footer a:hover,
         .footer a:active {
             color: #94949E;
             text-decoration: solid;
         }
+        .footer a:hover {
+            color: #94949E;
+            cursor: pointer;
+            text-decoration: underline;
+        }
         @media screen and (max-width: 767px) {
-            
+            .form-container {
+                width: 95%;
+                max-width: 440px;
+            }
+            .heading {
+                font-weight: normal;
+                font-size: 14px;
+                margin-bottom: 18px;
+            }
+            .form {
+                padding: 12px 32px;
+            }
+            .footer-container {
+                height: min-content;
+            }
+            .footer {
+                /* flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-flow: column-reverse; */
+                font-size: 14px;
+                gap: 7px;
+            }
+            .footer span {
+                display: none;
+            }
+            .footer a {
+                display: block;
+                line-height: 21px;
+            }
         }
     </style>
 </head>
@@ -127,25 +159,21 @@
             <img class="logo" src="./images/logo.png" alt="Logo">
             <img class="label" src="./images/label.svg" alt="Label">
         </div>
-        <form class="form">
+        <form class="form" action="/login" accept-charset="UTF-8" method="post">
             <h1 class="heading">Вход в личный кабинет</h1>
             <input type="text" placeholder="Логин">
             <input type="password" placeholder="Пароль">
-            <button type="submit">Войти</button>
+            <input type="submit" name="commit" value="Войти" class="button-submut" data-disable-with="Войти">
         </form>
     </div>
     <div class="footer-container">
         <div class="footer">
             <div class="copyright">(C) Рескон, 2022</div>
             <div class="contacts">
-                <span>
-                    Телефон службы поддержки:
-                    <a href="tel:+74995798900">+7&nbsp;499&nbsp;579-89-00</a>
-                </span>
-                <span>
-                    email:
-                    <a href="mailto:support@netts.ru">support@netts.ru</a>
-                </span>
+                <span>Телефон службы поддержки:</span>
+                <a href="tel:+74995798900">+7&nbsp;499&nbsp;579-89-00</a>
+                <span>email:</span>
+                <a href="mailto:support@netts.ru">support@netts.ru</a>
             </div>
         </div>
     </div>
