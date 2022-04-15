@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-17bf068c76eb2d552b4eea51a7f9c02d251c4a9c3b30c6a9aa322cc8eea70529.ico">
+    <title>Вход в личный кабинет</title>
+    <style>
+        /* border-radius */
+        /* button-color: #A4BE52 */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #F9F9F9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            font-family: Ubuntu, Helvetica, Arial, sans-serif;
+        }
+        .form-container {
+            height: min-content;
+            width: 440px;
+            justify-content: center;
+            align-self: center;
+            background-color: white;
+            box-shadow: gray;
+
+            box-shadow: 0px 3px 12px rgba(202, 206, 211, 0.16);
+
+            border: 1px solid #F3F3F3;
+            border-radius: 16px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 87px;
+            width: 100%;
+            border-bottom: 1px solid #EFEFEF;
+        }
+        .logo {
+            width: 39px;
+            height: 39px;
+        }
+        .label {
+            height: 32.25px;
+            width: 98.15384674072266px;
+            margin-left: 10px;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            padding: 32px;
+        }
+        .heading {
+            font-weight: normal;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+        .form > input {
+            background: #F9FAFA;
+            border: 0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 13px 16px;
+        }
+        .form > input::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: #3A3A3E;
+        }
+        .form > input:last-of-type {
+            margin-bottom: 24px;
+        }
+        .form > button {
+            background-color: #9EBF3B;
+            border-radius: 8px;
+            border: 0;
+            padding: 12px 24px;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+        }
+        .footer-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 71px;
+        }
+        .footer {
+            height: 100%;
+            margin: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #F1F1F1;
+            /* text */
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #94949E;
+        }
+        .footer span {
+            margin-left: 17px;
+        }
+        .footer a:link,
+        .footer a:visited,
+        .footer a:hover,
+        .footer a:active {
+            color: #94949E;
+            text-decoration: solid;
+        }
+        @media screen and (max-width: 767px) {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo-container">
+            <img class="logo" src="./images/logo.png" alt="Logo">
+            <img class="label" src="./images/label.svg" alt="Label">
+        </div>
+        <form class="form">
+            <h1 class="heading">Вход в личный кабинет</h1>
+            <input type="text" placeholder="Логин">
+            <input type="password" placeholder="Пароль">
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="copyright">(C) Рескон, 2022</div>
+            <div class="contacts">
+                <span>
+                    Телефон службы поддержки:
+                    <a href="tel:+74995798900">+7&nbsp;499&nbsp;579-89-00</a>
+                </span>
+                <span>
+                    email:
+                    <a href="mailto:support@netts.ru">support@netts.ru</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
