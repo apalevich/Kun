@@ -11,3 +11,10 @@
 TODO:
 Взять лучшее лого для "Netts.ru интернет-провайдер"
 Добавить префиксы CSS
+
+UPDATE:
+Content margin 15%/7px
+Font
+Logo
+Footer
+Date script

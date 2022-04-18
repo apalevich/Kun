@@ -7,6 +7,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-17bf068c76eb2d552b4eea51a7f9c02d251c4a9c3b30c6a9aa322cc8eea70529.ico">
     <title>Страница аутентификации</title>
     <style>
+        @font-face {
+            font-family: "Raleway";
+            src: url(https://netts.ru/wp-content/themes/netts_ovision_mobile/fonts/ralewayregular.woff2) format("woff2");
+            font-weight:400
+        }
+
+        @font-face {
+            font-family: "Raleway";
+            src: url(https://netts.ru/wp-content/themes/netts_ovision/fonts/ralewaysemibold.woff2) format("woff2");
+            font-weight:700
+        }
         * {
             box-sizing: border-box;
         }
@@ -14,33 +25,33 @@
             background-color: #F9F9F9;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             height: 100vh;
-            font-family: Ubuntu, Helvetica, Arial, sans-serif;
+            font-family: "Raleway", sans-serif, Arial;
             margin: 0;
         }
         .form-container {
             height: min-content;
             width: 440px;
+            margin-top: 15%;
             justify-content: center;
             align-self: center;
             background-color: white;
-            box-shadow: gray;
             box-shadow: 0px 3px 12px rgba(202, 206, 211, 0.16);
             border: 1px solid #F3F3F3;
             border-radius: 16px;
         }
         .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             height: 87px;
             width: 100%;
             border-bottom: 1px solid #EFEFEF;
+            text-align: center;
         }
         .logo {
-            width: 39px;
-            height: 39px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 38px;
+            width: auto;
         }
         .label {
             height: 32.25px;
@@ -92,9 +103,10 @@
             font-size: 18px;
             line-height: 120%;
         }
+        /* FOOTER */
         .footer-container {
-            position: absolute;
-            bottom: 0;
+            position: sticky;
+            top: 100vh;
             width: 100%;
             height: 71px;
         }
@@ -105,31 +117,56 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid #F1F1F1;
-            /* text */
+            
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 140%;
             color: #94949E;
         }
-        .footer span {
+        .copyright {
+            flex-grow: 1;
+        }
+        .contacts {
+            display: flex;
+            align-items: center;
+        }
+        .contacts span {
             margin-left: 17px;
         }
-        .footer a:link,
-        .footer a:visited,
-        .footer a:active {
+        .contacts a:link,
+        .contacts a:visited,
+        .contacts a:active {
             color: #94949E;
             text-decoration: solid;
         }
-        .footer a:hover {
+        .contacts a:hover {
             color: #94949E;
             cursor: pointer;
             text-decoration: underline;
         }
-        @media screen and (max-width: 767px) {
+        .messengers {
+            text-align: center;
+            display: flex;
+            gap: 18px;
+        }
+        .telegram-icon {
+            width: 26px;
+            height: 26px;
+            margin-left: 42px;
+        }
+        .whatsapp-icon {
+            width: 26px;
+            height: 26px;
+        }
+        @media screen and (max-width: 790px) {
+            body {
+                justify-content: flex-start;
+            }
             .form-container {
                 width: 95%;
                 max-width: 440px;
+                margin-top: 7px;
             }
             .heading {
                 font-weight: normal;
@@ -146,19 +183,48 @@
                 height: min-content;
             }
             .footer {
-                /* flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                flex-flow: column-reverse; */
-                font-size: 14px;
+                display: flex;
                 gap: 7px;
+                font-size: 2vh;
+                margin: 0 5px;
             }
-            .footer span {
+            .footer .copyright {
+                order: 1;
+                flex-grow: 0;
+            }
+            .footer .contacts {
+                flex-direction: column;
+                order: 3;
+            }
+            .footer .contacts span {
                 display: none;
             }
-            .footer a {
+            .footer .contacts a {
                 display: block;
                 line-height: 21px;
+            }
+            .footer .messengers {
+                order: 2;
+                text-align: center;
+                margin-top: 5px;
+                flex-grow: 1;
+                display: flex;
+                gap: 10px;
+            }
+            .footer .messengers a {
+                width: 50%;
+            }
+            .footer .messengers a:first-child {
+                text-align: right;
+            }
+            .footer .messengers a:last-child {
+                text-align: left;
+            }
+            .icon {
+                width: 100%;
+                height: auto;
+                max-width: 39px;
+                margin-left: 0;
             }
         }
     </style>
@@ -166,8 +232,7 @@
 <body>
     <div class="form-container">
         <div class="logo-container">
-            <img class="logo" src="./images/logo.png" alt="Logo">
-            <img class="label" src="./images/label.svg" alt="Label">
+            <img class="logo" src="./images/logo_full.svg" alt="Logo">
         </div>
         <form class="form"name="input" action="../authenticate" method="POST">
             <h1 class="heading">Страница аутентификации</h1>
@@ -183,14 +248,21 @@
     </div>
     <div class="footer-container">
         <div class="footer">
-            <div class="copyright">&copy; Рескон, 2022</div>
+            <div class="copyright">&copy; Рескон, <span id="yearValue">2022</span></div>
             <div class="contacts">
-                <span>Телефон службы поддержки:</span>
+                <span>Телефон службы поддержки:&nbsp;</span>
                 <a href="tel:+74995798900">+7&nbsp;499&nbsp;579-89-00</a>
-                <span>email:</span>
+                <span>email:&nbsp;</span>
                 <a href="mailto:support@netts.ru">support@netts.ru</a>
+            </div>
+            <div class="messengers">
+                <!-- <a href="https://t.me/netts_supportbot"><img class="icon telegram-icon" src="./images/telegram.svg" alt="Иконка Телеграм"></a>
+                <a href="https://wa.me/79295036168"><img class="icon whatsapp-icon" src="./images/whatsapp.svg" alt="Иконка whatsapp"></a> -->
             </div>
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('yearValue').innerHTML = new Date().getFullYear();
+</script>
 </html>
