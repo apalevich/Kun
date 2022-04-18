@@ -25,7 +25,6 @@
             background-color: #F9F9F9;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             height: 100vh;
             font-family: "Raleway", sans-serif, Arial;
             margin: 0;
@@ -33,10 +32,10 @@
         .form-container {
             height: min-content;
             width: 440px;
+            margin-top: 15%;
             justify-content: center;
             align-self: center;
             background-color: white;
-            box-shadow: gray;
             box-shadow: 0px 3px 12px rgba(202, 206, 211, 0.16);
             border: 1px solid #F3F3F3;
             border-radius: 16px;
@@ -139,6 +138,11 @@
             cursor: pointer;
             text-decoration: underline;
         }
+        .messengers {
+            text-align: center;
+            display: flex;
+            gap: 18px;
+        }
         .telegram-icon {
             width: 26px;
             height: 26px;
@@ -147,16 +151,15 @@
         .whatsapp-icon {
             width: 26px;
             height: 26px;
-            margin-left: 18px;
         }
         @media screen and (max-width: 790px) {
             body {
-                justify-content: space-between;
+                justify-content: flex-start;
             }
             .form-container {
                 width: 95%;
                 max-width: 440px;
-                margin-top: 15%;
+                margin-top: 7px;
             }
             .heading {
                 font-weight: normal;
@@ -207,20 +210,11 @@
             .footer .messengers a:last-child {
                 text-align: left;
             }
-            
             .icon {
                 width: 100%;
                 height: auto;
                 max-width: 39px;
                 margin-left: 0;
-            }
-
-            .telegram-icon {
-            }
-            .whatsapp-icon {
-                width: calc(100% - 3px);
-                height: auto;
-                max-width: 36px;
             }
         }
     </style>
@@ -247,7 +241,7 @@
                 <a href="mailto:support@netts.ru">support@netts.ru</a>
             </div>
             <div class="messengers">
-                <a href="https://t.me/netts_supportbot"><img class="icon telegram-icon" src="./images/telegram.png" alt="Иконка Телеграм"></a>
+                <a href="https://t.me/netts_supportbot"><img class="icon telegram-icon" src="./images/telegram.svg" alt="Иконка Телеграм"></a>
                 <a href="https://wa.me/79295036168"><img class="icon whatsapp-icon" src="./images/whatsapp.svg" alt="Иконка whatsapp"></a>
             </div>
         </div>
