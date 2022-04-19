@@ -9,12 +9,4 @@
 11.html — Страница редиректа клиента при самостоятельной блокировке из ЛК (https://my.netts.ru/self-block-redirect)
 
 TODO:
-Взять лучшее лого для "Netts.ru интернет-провайдер"
 Добавить префиксы CSS
-
-UPDATE:
-Content margin 15%/7px
-Font
-Logo
-Footer
-Date script

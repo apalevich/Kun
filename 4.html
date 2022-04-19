@@ -16,7 +16,7 @@
         @font-face {
             font-family: "Raleway";
             src: url(https://netts.ru/wp-content/themes/netts_ovision/fonts/ralewaysemibold.woff2) format("woff2");
-            font-weight:700
+            font-weight:600
         }
         * {
             box-sizing: border-box;
@@ -28,11 +28,11 @@
             height: 100vh;
             font-family: "Raleway", sans-serif, Arial;
             margin: 0;
+            justify-content: center;
         }
         .content-container {
             height: min-content;
             width: 440px;
-            margin-top: 15%;
             justify-content: center;
             align-self: center;
             background-color: white;
@@ -61,7 +61,8 @@
         .message-container {
             display: flex;
             flex-direction: column;
-            padding: 24px 32px;
+            padding: 32px;
+            padding-top: 24px;
         }
         .heading {
             display: flex;
@@ -70,9 +71,11 @@
             border-radius: 12px;
             padding: 18px;
             gap: 12px;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
         .heading-text {
-            font-style: normal;
+            font-weight: 600;
             font-size: 16px;
             line-height: 20px;
         }
@@ -82,7 +85,7 @@
             font-size: 16px;
             line-height: 22px;
             color: #363940;
-            margin-bottom: 24px;
+            margin: 0;
         }
         /* FOOTER */
         .footer-container {
@@ -141,9 +144,6 @@
         }
         /* MOBILE */
         @media screen and (max-width: 790px) {
-            body {
-                justify-content: flex-start;
-            }
             .content-container {
                 width: 95%;
                 max-width: 440px;
@@ -164,7 +164,7 @@
                 display: flex;
                 gap: 7px;
                 font-size: 2vh;
-                margin: 0 5px;
+                margin: 0 5%;
             }
             .footer .copyright {
                 order: 1;
@@ -201,7 +201,7 @@
             .icon {
                 width: 100%;
                 height: auto;
-                max-width: 39px;
+                max-width: 32px;
                 margin-left: 0;
             }
         }
@@ -242,4 +242,5 @@
 </body>
 <script>
     document.getElementById('yearValue').innerHTML = new Date().getFullYear();
-</script></html>
+</script>
+</html>

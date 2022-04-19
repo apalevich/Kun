@@ -16,7 +16,7 @@
         @font-face {
             font-family: "Raleway";
             src: url(https://netts.ru/wp-content/themes/netts_ovision/fonts/ralewaysemibold.woff2) format("woff2");
-            font-weight:700
+            font-weight:600
         }
         * {
             box-sizing: border-box;
@@ -28,12 +28,12 @@
             height: 100vh;
             font-family: "Raleway", sans-serif, Arial;
             margin: 0;
+            justify-content: center;
         }
         /* CONTENT */
         .content-container {
             height: min-content;
             width: 440px;
-            margin-top: 15%;
             justify-content: center;
             align-self: center;
             background-color: white;
@@ -62,7 +62,8 @@
         .message-container {
             display: flex;
             flex-direction: column;
-            padding: 24px 32px;
+            padding: 32px;
+            padding-top: 24px;
         }
         .heading {
             display: flex;
@@ -111,7 +112,6 @@
             line-height: 120%;
             text-decoration: none;
             text-align: center;
-            margin-bottom: 12px;
         }
         /* FOOTER */
         .footer-container {
@@ -171,9 +171,6 @@
 
         /* MOBILE */
         @media screen and (max-width: 790px) {
-            body {
-                justify-content: flex-start;
-            }
             .content-container {
                 width: 95%;
                 max-width: 440px;
@@ -190,7 +187,7 @@
                 display: flex;
                 gap: 7px;
                 font-size: 2vh;
-                margin: 0 5px;
+                margin: 0 5%;
             }
             .footer .copyright {
                 order: 1;
@@ -227,7 +224,7 @@
             .icon {
                 width: 100%;
                 height: auto;
-                max-width: 39px;
+                max-width: 32px;
                 margin-left: 0;
             }
         }
@@ -246,10 +243,10 @@
             <h2>Уважаемый абонент, у Вас включена временная блокировка услуг.</h2>
             <p class="description">
                 Для отмены блокировки и возобновления пользования услугами зайдите в 
-                <a class="inline-link" href="https://my.netts.ru/">личный кабинет</a> 
+                <a class="inline-link" href="https://lk.netts.ru/">личный кабинет</a> 
                 и отключите услугу «Блокировка».
             </p>
-            <a class="button" href="https://my.netts.ru/">Вход в личный кабинет</a>
+            <a class="button" href="https://lk.netts.ru/">Вход в личный кабинет</a>
         </div>
     </div>
     <div class="footer-container">
