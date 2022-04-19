@@ -21,11 +21,15 @@
         * {
             box-sizing: border-box;
         }
+        html {
+            height: -webkit-fill-available;
+        }
         body {
             background-color: #F9F9F9;
             display: flex;
             flex-direction: column;
             height: 100vh;
+            min-height: -webkit-fill-available;
             font-family: "Raleway", sans-serif, Arial;
             margin: 0;
             justify-content: center;
@@ -66,7 +70,7 @@
         }
         .heading {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             background: #F9F9F9;
             border-radius: 12px;
             padding: 18px;
@@ -85,18 +89,6 @@
             line-height: 22px;
             color: #363940;
             margin-bottom: 0;
-        }
-        .button {
-            background-color: #9EBF3B;
-            border-radius: 8px;
-            border: 0;
-            padding: 12px 24px;
-            color: white;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 120%;
-            text-decoration: none;
-            text-align: center;
         }
         /* FOOTER */
         .footer-container {
